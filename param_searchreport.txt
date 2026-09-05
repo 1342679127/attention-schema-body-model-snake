@@ -1,0 +1,40 @@
+============================================================
+Attention Schema Parameter Search - Statistical Report
+============================================================
+
+[Parameter Configuration]
+  RESOLUTION: [1, 2, 4]
+  MEMORY_TIMEOUT: [5, 10, 20, 40, 80]
+  UPDATE_INTERVAL: [1, 2, 5, 10, 20]
+  Total valid combinations (interval < timeout): 57
+  Repeats per combo: 30
+  Steps per run: 1000
+
+[Baseline Performance]
+  First-person reactive: 43.67 ± 1.18
+  Third-person omniscient: 78.23 ± 12.29
+
+------------------------------------------------------------
+[Optimal Parameter Combination]
+------------------------------------------------------------
+  RESOLUTION = 1
+  MEMORY_TIMEOUT = 5
+  UPDATE_INTERVAL = 1
+  Mean max length = 70.60 ± 8.30
+  Mean deaths = 1.37
+  vs First-person baseline: p=0.0000, d=3.24
+  vs Third-person baseline: p=0.0000, d=-0.92
+
+------------------------------------------------------------
+[Top 5 Ranking (by mean max length)]
+------------------------------------------------------------
+Rank	RES	TIMEOUT	INTERVAL	Mean±SD	Deaths	p_vs_first	d
+1	1	5	1	70.60±8.30	1.37	0.0000**	3.24
+2	1	5	2	70.33±10.85	1.43	0.0000**	2.46
+3	1	10	1	69.60±8.54	1.20	0.0000**	3.04
+4	1	20	1	67.00±10.62	1.37	0.0000**	2.20
+5	1	10	2	66.73±7.91	2.00	0.0000**	2.92
+
+============================================================
+End of Report
+============================================================
